@@ -487,6 +487,18 @@
             font-size: 0.9rem;
         }
 
+        /* --- CẤU HÌNH HIỆU ỨNG CUỘN TRƯỢT (SCROLL REVEAL) --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
             header h1 { font-size: 2rem; }
             .section-box { padding: 25px 18px; }
@@ -519,19 +531,19 @@
     <div class="container">
 
         <!-- Section 1 -->
-        <section class="section-box" id="chu-de">
+        <section class="section-box reveal" id="chu-de">
             <h2>Chủ đề và thông điệp chính</h2>
             <p><strong>Tên triển lãm:</strong> Nguyễn Ái Quốc ở Sài Gòn: Từ dấu chân lịch sử đến hành trình tìm đường cứu nước</p>
             <p><strong>Thông điệp:</strong> Sài Gòn là nơi ghi dấu một bước ngoặt quan trọng trong cuộc đời hoạt động của Nguyễn Tất Thành, người sau này được biết đến rộng rãi với tên gọi Nguyễn Ái Quốc và Chủ tịch Hồ Chí Minh. Tại đây, Người tìm hiểu đời sống xã hội, tiếp xúc với thực tế của người lao động và chuẩn bị cho chuyến đi ra nước ngoài ngày 5/6/1911.</p>
         </section>
 
         <!-- Section 2 -->
-        <section class="section-box">
+        <section class="section-box reveal">
             <h2>Nội dung chi tiết các khu trưng bày</h2>
             
             <div class="exhibit-grid">
                 <!-- Khu 1 -->
-                <div class="exhibit-card">
+                <div class="exhibit-card reveal">
                     <img src="khu1-nhaso5.jpg" alt="Nhà số 5 Châu Văn Liêm" class="exhibit-img">
                     <div class="image-caption">Di tích lưu niệm Chủ tịch Hồ Chí Minh tại số 5 Châu Văn Liêm, Quận 5, TP.HCM (ngôi nhà Liên Thành thương quán xưa)</div>
                     <div class="exhibit-content">
@@ -546,7 +558,7 @@
                 </div>
 
                 <!-- Khu 2 -->
-                <div class="exhibit-card">
+                <div class="exhibit-card reveal">
                     <img src="khu2-bennharong.jpg" alt="Bến Nhà Rồng" class="exhibit-img">
                     <div class="image-caption">Hình ảnh Bến Nhà Rồng và Cảng Sài Gòn xưa - nơi người thanh niên Nguyễn Tất Thành xuất phát tìm đường cứu nước</div>
                     <div class="exhibit-content">
@@ -559,7 +571,7 @@
                 </div>
 
                 <!-- Khu 3 -->
-                <div class="exhibit-card">
+                <div class="exhibit-card reveal">
                     <img src="khu3-saigonxua.jpg" alt="Sài Gòn đầu thế kỷ XX" class="exhibit-img">
                     <div class="image-caption">Tư liệu hình ảnh phố phường và đời sống sinh hoạt của người dân Sài Gòn những năm đầu thế kỷ XX</div>
                     <div class="exhibit-content">
@@ -572,7 +584,7 @@
                 </div>
 
                 <!-- Khu 4 -->
-                <div class="exhibit-card">
+                <div class="exhibit-card reveal">
                     <img src="khu4-nguyenaiquoc.jpg" alt="Nguyễn Ái Quốc năm 1919" class="exhibit-img">
                     <div class="image-caption">Hình ảnh Chân dung Nguyễn Ái Quốc đăng trên báo L'Humanité năm 1919 khi gửi bản Yêu sách của nhân dân An Nam</div>
                     <div class="exhibit-content">
@@ -588,26 +600,26 @@
         </section>
 
         <!-- Section 3 -->
-        <section class="section-box">
+        <section class="section-box reveal">
             <h2>Dòng thời gian tương tác</h2>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-year">1910</div>
                     <p><strong>Từ Phan Thiết vào Sài Gòn</strong><br>Nguyễn Tất Thành rời Trường Dục Thanh và tiếp tục hành trình vào Sài Gòn.</p>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-year">1910–1911</div>
                     <p><strong>Thời gian ở Sài Gòn</strong><br>Người ở tại cơ sở Liên Thành thương quán, tìm hiểu đời sống người lao động và chuẩn bị ra nước ngoài.</p>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-year">5/6/1911</div>
                     <p><strong>Rời Bến Nhà Rồng</strong><br>Nguyễn Tất Thành lấy tên Văn Ba, đi trên tàu Amiral Latouche-Tréville, bắt đầu hành trình tìm đường cứu nước.</p>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-year">1919</div>
                     <p><strong>Tên Nguyễn Ái Quốc xuất hiện trên diễn đàn quốc tế</strong><br>Người gửi Yêu sách của nhân dân An Nam tới Hội nghị Versailles.</p>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-year">1920</div>
                     <p><strong>Xác định con đường cách mạng</strong><br>Nguyễn Ái Quốc tiếp cận và lựa chọn con đường cách mạng vô sản, mở ra bước phát triển mới trong quá trình tìm đường giải phóng dân tộc.</p>
                 </div>
@@ -615,13 +627,13 @@
         </section>
 
         <!-- Section 4 -->
-        <section class="section-box">
+        <section class="section-box reveal">
             <h2>Hiện vật, hình ảnh và tư liệu lịch sử</h2>
             <p style="font-size: 0.95rem; margin-bottom: 20px;">Dưới đây là các tài liệu và hiện vật lưu trữ quý giá. Bấm vào từng hình ảnh để xem chi tiết tư liệu gốc tại trang nguồn.</p>
             
             <div class="document-grid">
                 <!-- Tài liệu 1 -> hinh1.jpg -->
-                <div class="doc-card">
+                <div class="doc-card reveal">
                     <a href="https://tuoitre.vn/saigontimes/den-nha-so-5-chau-van-liem-dau-tich-9-thang-bac-ho-chuan-bi-hanh-trinh-cuu-nuoc-1061237382.htm" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
                         <img src="hinh1.jpg" alt="Ảnh di tích số 5 Châu Văn Liêm" class="doc-img">
                     </a>
@@ -632,7 +644,7 @@
                 </div>
 
                 <!-- Tài liệu 2 -> hinh2.jpg -->
-                <div class="doc-card">
+                <div class="doc-card reveal">
                     <a href="https://www.qdnd.vn/ky-niem-110-nam-ngay-bac-ho-ra-di-tim-duong-cuu-nuoc/hanh-trinh-lich-su/hinh-anh-bac-ho-tu-ben-nha-rong-den-quang-truong-ba-dinh-lich-su-660915" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
                         <img src="hinh2.jpg" alt="Ảnh Bến Nhà Rồng" class="doc-img">
                     </a>
@@ -643,7 +655,7 @@
                 </div>
 
                 <!-- Tài liệu 3 -> hinh3.jpg -->
-                <div class="doc-card">
+                <div class="doc-card reveal">
                     <a href="https://congly.vn/tau-do-doc-latouche-treville-so-phan-lich-su-tao-nen-huyen-thoai-mot-con-tau-164876.html" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
                         <img src="hinh3.jpg" alt="Ảnh tàu Amiral Latouche-Tréville" class="doc-img">
                     </a>
@@ -654,7 +666,7 @@
                 </div>
 
                 <!-- Tài liệu 4 -> hinh4.jpg -->
-                <div class="doc-card">
+                <div class="doc-card reveal">
                     <a href="https://dantri.com.vn/thoi-su/trang-so-luong-cua-bac-ho-khi-lam-phu-bep-tren-tau-phap-nam-1911-20200516172408150.htm" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
                         <img src="hinh4.jpg" alt="Bản sao sổ lương có tên Văn Ba" class="doc-img">
                     </a>
@@ -665,7 +677,7 @@
                 </div>
 
                 <!-- Tài liệu 5 -> hinh5.jpg -->
-                <div class="doc-card">
+                <div class="doc-card reveal">
                     <a href="https://tapchilichsudang.vn/ban-yeu-sach-cua-nhan-dan-an-nam-100-nam-voi-nhung-am-huong-hao-hung.html" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
                         <img src="hinh5.jpg" alt="Bản sao Yêu sách của nhân dân An Nam" class="doc-img">
                     </a>
@@ -676,7 +688,7 @@
                 </div>
 
                 <!-- Tài liệu 6 -> hinh6.jpg -->
-                <div class="doc-card">
+                <div class="doc-card reveal">
                     <a href="https://media.qdnd.vn/long-form/nguyen-ai-quoc-voi-hanh-trinh-tim-duong-cuu-nuoc-giai-phong-dan-toc-54717" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
                         <img src="hinh6.jpg" alt="Bản đồ hành trình 1911–1920" class="doc-img">
                     </a>
@@ -689,10 +701,10 @@
         </section>
 
         <!-- Section 5 -->
-        <section class="section-box">
+        <section class="section-box reveal">
             <h2>Câu hỏi tương tác dành cho khách tham quan</h2>
             <div class="quiz-container">
-                <div class="quiz-card">
+                <div class="quiz-card reveal">
                     <div class="quiz-title">1. Nguyễn Tất Thành rời Bến Nhà Rồng vào ngày nào?</div>
                     <ul class="quiz-options">
                         <li><label><input type="radio" name="q1" value="A"> 19/5/1890</label></li>
@@ -701,7 +713,7 @@
                     </ul>
                 </div>
 
-                <div class="quiz-card">
+                <div class="quiz-card reveal">
                     <div class="quiz-title">2. Ngôi nhà gắn với thời gian Nguyễn Tất Thành ở Sài Gòn là địa chỉ nào?</div>
                     <ul class="quiz-options">
                         <li><label><input type="radio" name="q2" value="A"> Nhà số 5 Châu Văn Liêm</label></li>
@@ -710,7 +722,7 @@
                     </ul>
                 </div>
 
-                <div class="quiz-card">
+                <div class="quiz-card reveal">
                     <div class="quiz-title">3. Bản Yêu sách của nhân dân An Nam được gửi tới Hội nghị Versailles vào năm nào?</div>
                     <ul class="quiz-options">
                         <li><label><input type="radio" name="q3" value="A"> 1911</label></li>
@@ -728,14 +740,14 @@
         </section>
 
         <!-- Section 6 -->
-        <section class="section-box">
+        <section class="section-box reveal">
             <h2>Lời kết triển lãm</h2>
             <p>Sài Gòn lưu giữ những dấu mốc quan trọng trong hành trình của người thanh niên yêu nước Nguyễn Tất Thành. Từ ngôi nhà ở Chợ Lớn đến Bến Nhà Rồng, mỗi địa điểm gắn với một phần câu chuyện về quá trình chuẩn bị và quyết định ra đi tìm đường cứu nước.</p>
             <p>Ngày 5/6/1911 không chỉ đánh dấu một chuyến đi bằng đường biển, mà còn mở đầu cho hành trình tìm kiếm con đường giải phóng dân tộc kéo dài nhiều năm. Nhìn lại những dấu mốc ấy, người xem có thể hiểu rõ hơn bối cảnh lịch sử, ý nghĩa của sự lựa chọn và mối liên hệ giữa những địa điểm lịch sử của Sài Gòn với tiến trình cách mạng Việt Nam.</p>
         </section>
 
         <!-- Section 7 -->
-        <section class="section-box">
+        <section class="section-box reveal">
             <h2>Nguồn tư liệu chính thống</h2>
             <ol class="reference-list">
                 <li>
@@ -773,6 +785,7 @@
     </div>
 
     <script>
+        // Hàm kiểm tra câu hỏi trắc nghiệm
         function checkAnswers() {
             const answers = { q1: 'B', q2: 'A', q3: 'B' };
             let score = 0;
@@ -804,6 +817,24 @@
             const resultDiv = document.getElementById('quiz-result');
             resultDiv.style.display = 'none';
         }
+
+        // KÍCH HOẠT HIỆU ỨNG CUỘN TRƯỢT HIỂN THỊ (SCROLL REVEAL)
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
     </script>
 </body>
 </html>
