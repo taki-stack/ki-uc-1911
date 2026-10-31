@@ -3,207 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Ái Quốc ở Sài Gòn - Historic Vietnam</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>BẢO TÀNG SỐ - Nguyễn Ái Quốc ở Sài Gòn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #f8f9fa;
+            --primary: #8b1515;
+            --primary-dark: #3a0606;
+            --accent: #c29b38;
+            --accent-light: #e6cb7a;
+            --bg-paper: #f7f3eb;
             --bg-card: #ffffff;
-            --text-dark: #212529;
-            --text-muted: #6c757d;
-            --border-color: #e9ecef;
-            --nav-bg: #2d3136;
+            --text-dark: #2c221e;
+            --border-color: #d8cdb8;
+            --shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Merriweather', serif;
-            background-color: var(--bg-main);
+            background-color: var(--bg-paper);
             color: var(--text-dark);
             line-height: 1.8;
             padding-bottom: 60px;
         }
 
-        /* Top Header */
-        .top-header {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 30px 20px 20px 20px;
+        /* Top Navigation Header */
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--primary-dark);
+            border-bottom: 1px solid var(--accent);
+            padding: 12px 25px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
         }
 
-        .site-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 2.4rem;
-            letter-spacing: 1px;
-            color: #000;
-            text-transform: uppercase;
-            line-height: 1;
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
         }
 
-        .site-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-top: 6px;
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            background-color: var(--primary);
+            border: 1px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--accent);
+            font-size: 1.1rem;
         }
 
-        .social-links {
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: 1rem;
-        }
-
-        .social-links a {
-            color: #000;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: var(--nav-bg);
-            margin-bottom: 35px;
-        }
-
-        .nav-container {
-            max-width: 1140px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .nav-container a {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 0.8rem;
-            text-transform: uppercase;
             color: #ffffff;
-            text-decoration: none;
-            padding: 14px 20px;
-            letter-spacing: 0.5px;
-            transition: background 0.2s;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .nav-container a:hover, .nav-container a.active {
-            background-color: #000;
-        }
-
-        /* Main Layout */
-        .wrapper {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            gap: 40px;
-        }
-
-        .main-content {
-            flex: 1;
-            background: var(--bg-card);
-            padding: 40px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-        }
-
-        .sidebar {
-            width: 280px;
-            flex-shrink: 0;
-        }
-
-        /* Section Styling */
-        .post-title-main {
+        .brand-sub {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 2rem;
-            color: #000;
-            margin-bottom: 8px;
-            line-height: 1.3;
+            font-size: 0.75rem;
+            color: var(--accent-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .post-meta {
+        .nav-menu-btn {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Banner */
+        header {
+            background: linear-gradient(rgba(30, 5, 5, 0.82), rgba(60, 10, 10, 0.88)), 
+                        url('header-bg.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px 90px 20px;
+            border-bottom: 5px solid var(--accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .tag-badge {
+            display: inline-block;
+            background: rgba(194, 155, 56, 0.2);
+            border: 1px solid var(--accent);
+            color: var(--accent-light);
             font-family: 'Montserrat', sans-serif;
             font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
+            font-weight: 600;
+            padding: 6px 18px;
+            border-radius: 20px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 3rem;
+            color: #ffffff;
+            line-height: 1.25;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            max-width: 750px;
+            margin: 0 auto 35px auto;
+            font-style: italic;
+            color: #e6dace;
+        }
+
+        .btn-start {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            padding: 14px 38px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-start:hover {
+            background-color: #d4aa3e;
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 960px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
         }
 
         .section-box {
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
         }
 
-        .section-box:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+        .section-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 6px 6px 0 0;
         }
 
         h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: #000;
-            margin-bottom: 20px;
-            line-height: 1.3;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-bottom: 22px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
         }
 
         h3 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: #111;
-            margin: 20px 0 10px 0;
+            color: var(--primary-dark);
+            font-size: 1.25rem;
+            margin: 25px 0 12px 0;
         }
 
-        p {
-            margin-bottom: 16px;
-            text-align: justify;
-            font-size: 1rem;
-            color: #333;
+        p { margin-bottom: 16px; text-align: justify; }
+
+        /* Images & Exhibits Layout */
+        .exhibit-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 35px;
+            margin-top: 25px;
         }
 
-        /* Images & Exhibit Layout */
         .exhibit-card {
-            margin: 30px 0;
-            border: 1px solid var(--border-color);
             background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
 
         .exhibit-img {
             width: 100%;
-            max-height: 500px;
+            max-height: 480px;
             object-fit: cover;
             display: block;
         }
 
         .image-caption {
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             text-align: center;
             padding: 12px 15px;
-            background: #f8f9fa;
-            color: var(--text-muted);
+            background: #fcf9f2;
+            color: #55443b;
             font-style: italic;
-            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-top: 1px solid #f0e6d6;
         }
 
         .exhibit-content {
-            padding: 25px 20px 20px 20px;
+            padding: 25px;
         }
 
         .exhibit-tag {
             display: inline-block;
-            background: #000;
+            background: var(--primary);
             color: #fff;
             font-family: 'Montserrat', sans-serif;
             font-size: 0.75rem;
             font-weight: 600;
             padding: 4px 10px;
+            border-radius: 3px;
             margin-bottom: 12px;
             text-transform: uppercase;
         }
@@ -211,37 +256,51 @@
         /* Timeline Interactive */
         .timeline {
             position: relative;
-            padding-left: 25px;
-            margin: 25px 0 10px 5px;
-            border-left: 2px solid #ccc;
+            padding-left: 30px;
+            margin: 30px 0 10px 10px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            bottom: 5px;
+            width: 3px;
+            background-color: var(--primary);
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 25px;
-            padding-left: 15px;
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 22px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -23px;
-            top: 6px;
-            width: 10px;
-            height: 10px;
+            left: -30px;
+            top: 26px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
-            background-color: #000;
+            background-color: var(--accent);
+            border: 3px solid var(--primary);
         }
 
         .timeline-year {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            color: #000;
-            font-size: 1.1rem;
-            margin-bottom: 4px;
+            color: var(--primary);
+            font-size: 1.15rem;
+            margin-bottom: 5px;
         }
 
-        /* Data Tables */
+        /* Data Table */
         .data-table {
             width: 100%;
             border-collapse: collapse;
@@ -256,190 +315,143 @@
         }
 
         .data-table th {
-            background-color: var(--nav-bg);
+            background-color: var(--primary);
             color: #fff;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
         }
 
         .data-table tr:nth-child(even) {
-            background-color: #f9f9f9;
+            background-color: rgba(0,0,0,0.02);
         }
 
-        /* Quiz Styling */
+        /* Quiz Section */
+        .quiz-container { margin-top: 20px; }
+
         .quiz-card {
-            background: #f8f9fa;
-            padding: 20px;
+            background: #fff;
+            padding: 22px;
+            border-radius: 6px;
             border: 1px solid var(--border-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
         }
 
         .quiz-title {
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             margin-bottom: 12px;
-            color: #111;
+            color: var(--primary-dark);
         }
 
-        .quiz-options {
-            list-style: none;
-        }
-
-        .quiz-options li {
-            margin-bottom: 8px;
-        }
+        .quiz-options { list-style: none; }
+        .quiz-options li { margin-bottom: 10px; }
 
         .quiz-options label {
             display: flex;
             align-items: center;
             gap: 10px;
             cursor: pointer;
-            padding: 6px 10px;
-            background: #fff;
-            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 4px;
+            background: var(--bg-paper);
+            transition: background 0.2s;
         }
+
+        .quiz-options label:hover { background: #ebdcd0; }
 
         .quiz-actions {
             display: flex;
-            gap: 12px;
-            margin-top: 20px;
+            gap: 15px;
+            margin-top: 25px;
         }
 
         .btn-quiz {
-            background: #000;
+            background: var(--primary);
             color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 24px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
+            border-radius: 4px;
             cursor: pointer;
         }
 
+        .btn-quiz:hover { background: var(--primary-dark); }
+
         .btn-reset {
-            background: #6c757d;
+            background: #666;
             color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 24px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
+            border-radius: 4px;
             cursor: pointer;
         }
 
         .quiz-result {
             margin-top: 15px;
             padding: 12px;
+            border-radius: 4px;
             display: none;
             font-weight: 600;
         }
 
-        /* Sidebar Styling (Historic Vietnam Style) */
-        .sidebar-widget {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            margin-bottom: 25px;
-        }
-
-        .sidebar-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #000;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #000;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 8px 12px;
-            border: 1px solid var(--border-color);
-            font-family: 'Merriweather', serif;
-            font-size: 0.9rem;
-            background: #f8f9fa;
-        }
-
-        .archive-list {
-            list-style: none;
-        }
-
-        .archive-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border-color);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.88rem;
-            color: var(--text-muted);
-        }
-
-        .archive-list li:last-child {
-            border-bottom: none;
-        }
-
-        .reference-list {
-            padding-left: 20px;
-        }
-
-        .reference-list li {
-            margin-bottom: 15px;
-        }
+        .reference-list { padding-left: 20px; }
+        .reference-list li { margin-bottom: 15px; }
 
         footer {
             text-align: center;
             padding: 30px 20px 0 20px;
-            margin-top: 40px;
             border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            font-family: 'Montserrat', sans-serif;
+            color: #666;
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 900px) {
-            .wrapper { flex-direction: column; }
-            .sidebar { width: 100%; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .section-box { padding: 25px 18px; }
+            .exhibit-img { max-height: 280px; }
+            .data-table { display: block; overflow-x: auto; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-header">
-        <div>
-            <div class="site-title">HISTORIC VIETNAM</div>
-            <div class="site-subtitle">Tư liệu & Triển lãm Lịch sử KTS</div>
-        </div>
-        <div class="social-links">
-            <a href="#">f</a>
-            <a href="#">in</a>
-        </div>
+    <!-- Top Navigation Header -->
+    <div class="top-nav">
+        <a href="#" class="brand-logo">
+            <div class="logo-icon">🏛</div>
+            <div class="brand-text">
+                <span class="brand-name">BẢO TÀNG SỐ</span>
+                <span class="brand-sub">NGUYỄN ÁI QUỐC Ở SÀI GÒN</span>
+            </div>
+        </a>
+        <button class="nav-menu-btn">☰</button>
     </div>
 
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="active">HOME</a>
-            <a href="#chu-de">TALKS</a>
-            <a href="#khu-trung-bay">BLOG ARTICLES</a>
-            <a href="#dong-thoi-gian">PUBLICATIONS</a>
-            <a href="#tu-lieu">THEN & NOW IMAGES</a>
-            <a href="#kham-pha">CONTACT</a>
-        </div>
-    </nav>
+    <!-- Hero Banner -->
+    <header>
+        <div class="tag-badge">★ TRIỂN LÃM LỊCH SỬ TƯƠNG TÁC SỐ ★</div>
+        <h1>NGUYỄN ÁI QUỐC Ở SÀI GÒN</h1>
+        <p>Từ dấu chân lịch sử đến hành trình tìm đường cứu nước (1910 - 1911)</p>
+        <a href="#chu-de" class="btn-start">Bắt đầu tham quan</a>
+    </header>
 
-    <div class="wrapper">
-        <main class="main-content">
+    <div class="container">
 
-            <h1 class="post-title-main">Nguyễn Ái Quốc ở Sài Gòn: Từ dấu chân lịch sử đến hành trình tìm đường cứu nước</h1>
-            <div class="post-meta">Posted on 05/06/1911 | Triển lãm chuyên đề số</div>
+        <!-- Section 1 -->
+        <section class="section-box" id="chu-de">
+            <h2>Chủ đề và thông điệp chính</h2>
+            <p><strong>Tên triển lãm:</strong> Nguyễn Ái Quốc ở Sài Gòn: Từ dấu chân lịch sử đến hành trình tìm đường cứu nước</p>
+            <p><strong>Thông điệp:</strong> Sài Gòn là nơi ghi dấu một bước ngoặt quan trọng trong cuộc đời hoạt động của Nguyễn Tất Thành, người sau này được biết đến rộng rãi với tên gọi Nguyễn Ái Quốc và Chủ tịch Hồ Chí Minh. Tại đây, Người tìm hiểu đời sống xã hội, tiếp xúc với thực tế của người lao động và chuẩn bị cho chuyến đi ra nước ngoài ngày 5/6/1911.</p>
+        </section>
 
-            <!-- Section 1 -->
-            <section class="section-box" id="chu-de">
-                <h2>Chủ đề và thông điệp chính</h2>
-                <p><strong>Tên triển lãm:</strong> Nguyễn Ái Quốc ở Sài Gòn: Từ dấu chân lịch sử đến hành trình tìm đường cứu nước</p>
-                <p><strong>Thông điệp:</strong> Sài Gòn là nơi ghi dấu một bước ngoặt quan trọng trong cuộc đời hoạt động của Nguyễn Tất Thành, người sau này được biết đến rộng rãi với tên gọi Nguyễn Ái Quốc và Chủ tịch Hồ Chí Minh. Tại đây, Người tìm hiểu đời sống xã hội, tiếp xúc với thực tế của người lao động và chuẩn bị cho chuyến đi ra nước ngoài ngày 5/6/1911.</p>
-            </section>
-
-            <!-- Section 2 -->
-            <section class="section-box" id="khu-trung-bay">
-                <h2>Nội dung chi tiết các khu trưng bày</h2>
-                
+        <!-- Section 2 -->
+        <section class="section-box">
+            <h2>Nội dung chi tiết các khu trưng bày</h2>
+            
+            <div class="exhibit-grid">
                 <!-- Khu 1 -->
                 <div class="exhibit-card">
                     <img src="khu1-nhaso5.jpg" alt="Nhà số 5 Châu Văn Liêm" class="exhibit-img">
@@ -494,192 +506,170 @@
                         <p>Khu trưng bày này giúp người xem hiểu rằng chuyến đi từ Sài Gòn không phải một sự kiện biệt lập, mà là điểm khởi đầu của quá trình tìm kiếm con đường giải phóng dân tộc.</p>
                     </div>
                 </div>
-            </section>
-
-            <!-- Section 3 -->
-            <section class="section-box" id="dong-thoi-gian">
-                <h2>Dòng thời gian tương tác</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-year">1910</div>
-                        <p><strong>Từ Phan Thiết vào Sài Gòn</strong><br>Nguyễn Tất Thành rời Trường Dục Thanh và tiếp tục hành trình vào Sài Gòn.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">1910–1911</div>
-                        <p><strong>Thời gian ở Sài Gòn</strong><br>Người ở tại cơ sở Liên Thành thương quán, tìm hiểu đời sống người lao động và chuẩn bị ra nước ngoài.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">5/6/1911</div>
-                        <p><strong>Rời Bến Nhà Rồng</strong><br>Nguyễn Tất Thành lấy tên Văn Ba, đi trên tàu Amiral Latouche-Tréville, bắt đầu hành trình tìm đường cứu nước.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">1919</div>
-                        <p><strong>Tên Nguyễn Ái Quốc xuất hiện trên diễn đàn quốc tế</strong><br>Người gửi Yêu sách của nhân dân An Nam tới Hội nghị Versailles.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">1920</div>
-                        <p><strong>Xác định con đường cách mạng</strong><br>Nguyễn Ái Quốc tiếp cận và lựa chọn con đường cách mạng vô sản, mở ra bước phát triển mới trong quá trình tìm đường giải phóng dân tộc.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 4 -->
-            <section class="section-box" id="tu-lieu">
-                <h2>Hiện vật, hình ảnh và tư liệu lịch sử</h2>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Tư liệu đề xuất</th>
-                            <th>Giá trị đối với triển lãm</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Ảnh di tích số 5 Châu Văn Liêm</td>
-                            <td>Giới thiệu nơi Nguyễn Tất Thành từng ở tại Sài Gòn.</td>
-                        </tr>
-                        <tr>
-                            <td>Ảnh Bến Nhà Rồng</td>
-                            <td>Xác định địa điểm gắn với sự kiện ngày 5/6/1911.</td>
-                        </tr>
-                        <tr>
-                            <td>Ảnh tàu Amiral Latouche-Tréville</td>
-                            <td>Giúp người xem hình dung phương tiện gắn với chuyến đi lịch sử.</td>
-                        </tr>
-                        <tr>
-                            <td>Bản sao sổ lương hoặc tài liệu nhân viên tàu có tên Văn Ba</td>
-                            <td>Minh họa tư liệu về việc làm trên tàu, cần ghi rõ nguồn lưu trữ.</td>
-                        </tr>
-                        <tr>
-                            <td>Bản sao Yêu sách của nhân dân An Nam năm 1919</td>
-                            <td>Thể hiện bước phát triển trong hoạt động chính trị của Nguyễn Ái Quốc.</td>
-                        </tr>
-                        <tr>
-                            <td>Bản đồ hành trình 1911–1920</td>
-                            <td>Kết nối sự kiện ở Sài Gòn với quá trình hoạt động quốc tế.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="font-size: 0.95rem; margin-top: 15px;">Nguồn tham khảo quan trọng về sự kiện năm 1911 là bài viết của Bảo tàng Lịch sử TP.HCM và các tư liệu trên cổng thông tin Hồ Chí Minh.</p>
-            </section>
-
-            <!-- Section 5 -->
-            <section class="section-box">
-                <h2>Thiết kế bảo tàng số / website</h2>
-                <p><strong>Trang chủ: Cánh cửa lịch sử</strong><br>Đặt tên triển lãm nổi bật, sử dụng ảnh Bến Nhà Rồng làm hình nền và giới thiệu ngắn về sự kiện ngày 5/6/1911. Có nút “Bắt đầu tham quan”.</p>
-                <p><strong>Bản đồ và dòng thời gian</strong><br>Cho phép người xem nhấn vào từng địa điểm hoặc mốc thời gian để mở ảnh, chú thích và thông tin lịch sử.</p>
-                <p><strong>Góc tư liệu</strong><br>Trưng bày ảnh, bản sao tài liệu, lời thuyết minh ngắn và đường dẫn tới nguồn gốc. Mỗi tư liệu cần có chú thích và thông tin xuất xứ.</p>
-                <p><strong>Góc khám phá</strong><br>Tạo câu hỏi trắc nghiệm, ghép sự kiện với năm và trò chơi sắp xếp các mốc lịch sử theo trình tự.</p>
-                <p style="font-style: italic; margin-top: 10px;"><strong>Phong cách thiết kế đề xuất:</strong> Nền màu kem giấy cũ, đỏ sẫm và nâu trầm; sử dụng phông chữ dễ đọc, ảnh có độ phân giải tốt, hạn chế chữ dài trên một màn hình. Các hiệu ứng chỉ nên hỗ trợ nội dung, không biến triển lãm lịch sử thành một đống hiệu ứng chuyển cảnh vô nghĩa.</p>
-            </section>
-
-            <!-- Section 6 -->
-            <section class="section-box" id="kham-pha">
-                <h2>Câu hỏi tương tác dành cho khách tham quan</h2>
-                <div class="quiz-container">
-                    <div class="quiz-card">
-                        <div class="quiz-title">1. Nguyễn Tất Thành rời Bến Nhà Rồng vào ngày nào?</div>
-                        <ul class="quiz-options">
-                            <li><label><input type="radio" name="q1" value="A"> 19/5/1890</label></li>
-                            <li><label><input type="radio" name="q1" value="B"> 5/6/1911</label></li>
-                            <li><label><input type="radio" name="q1" value="C"> 2/9/1945</label></li>
-                        </ul>
-                    </div>
-
-                    <div class="quiz-card">
-                        <div class="quiz-title">2. Ngôi nhà gắn với thời gian Nguyễn Tất Thành ở Sài Gòn là địa chỉ nào?</div>
-                        <ul class="quiz-options">
-                            <li><label><input type="radio" name="q2" value="A"> Nhà số 5 Châu Văn Liêm</label></li>
-                            <li><label><input type="radio" name="q2" value="B"> Dinh Độc Lập</label></li>
-                            <li><label><input type="radio" name="q2" value="C"> Bưu điện Trung tâm Sài Gòn</label></li>
-                        </ul>
-                    </div>
-
-                    <div class="quiz-card">
-                        <div class="quiz-title">3. Bản Yêu sách của nhân dân An Nam được gửi tới Hội nghị Versailles vào năm nào?</div>
-                        <ul class="quiz-options">
-                            <li><label><input type="radio" name="q3" value="A"> 1911</label></li>
-                            <li><label><input type="radio" name="q3" value="B"> 1919</label></li>
-                            <li><label><input type="radio" name="q3" value="C"> 1945</label></li>
-                        </ul>
-                    </div>
-
-                    <div class="quiz-actions">
-                        <button class="btn-quiz" onclick="checkAnswers()">Kiểm tra kết quả</button>
-                        <button class="btn-reset" onclick="resetQuiz()">Làm lại</button>
-                    </div>
-                    <div id="quiz-result" class="quiz-result"></div>
-                </div>
-            </section>
-
-            <!-- Section 7 -->
-            <section class="section-box">
-                <h2>Lời kết triển lãm</h2>
-                <p>Sài Gòn lưu giữ những dấu mốc quan trọng trong hành trình của người thanh niên yêu nước Nguyễn Tất Thành. Từ ngôi nhà ở Chợ Lớn đến Bến Nhà Rồng, mỗi địa điểm gắn với một phần câu chuyện về quá trình chuẩn bị và quyết định ra đi tìm đường cứu nước.</p>
-                <p>Ngày 5/6/1911 không chỉ đánh dấu một chuyến đi bằng đường biển, mà còn mở đầu cho hành trình tìm kiếm con đường giải phóng dân tộc kéo dài nhiều năm. Nhìn lại những dấu mốc ấy, người xem có thể hiểu rõ hơn bối cảnh lịch sử, ý nghĩa của sự lựa chọn và mối liên hệ giữa những địa điểm lịch sử của Sài Gòn với tiến trình cách mạng Việt Nam.</p>
-            </section>
-
-            <!-- Section 8 -->
-            <section class="section-box">
-                <h2>Nguồn tư liệu chính thống</h2>
-                <ol class="reference-list">
-                    <li>
-                        <strong>1. Bảo tàng Hồ Chí Minh</strong><br>
-                        <em>Chuyến đi lịch sử</em><br>
-                        Tư liệu về sự kiện ngày 5/6/1911 và bối cảnh lịch sử của chuyến đi.
-                    </li>
-                    <li>
-                        <strong>2. Bảo tàng Lịch sử TP.HCM</strong><br>
-                        <em>Thăm nơi Bác Hồ đã ở trước khi ra đi tìm đường cứu nước</em><br>
-                        Thông tin về di tích số 5 Châu Văn Liêm và Liên Thành thương quán.
-                    </li>
-                    <li>
-                        <strong>3. Cổng thông tin Hồ Chí Minh</strong><br>
-                        <em>Hồ Chí Minh - Tiểu sử, Bảo tàng Hồ Chí Minh</em><br>
-                        Nguồn tham khảo về quá trình từ Phan Thiết vào Sài Gòn và các hoạt động trước năm 1911.
-                    </li>
-                    <li>
-                        <strong>4. Cổng thông tin Hồ Chí Minh</strong><br>
-                        <em>Những dấu mốc lịch sử trên hành trình tìm đường cứu nước của Nguyễn Ái Quốc</em><br>
-                        Nguồn về hoạt động của Nguyễn Ái Quốc từ năm 1911 đến năm 1920.
-                    </li>
-                    <li>
-                        <strong>5. Bảo tàng Lịch sử TP.HCM</strong><br>
-                        <em>Kỷ niệm ngày Bác Hồ ra đi tìm đường cứu nước</em><br>
-                        Tư liệu đối chiếu về tên tàu, thời điểm và hành trình xuất phát từ cảng Sài Gòn.
-                    </li>
-                </ol>
-                <p style="margin-top: 15px; font-style: italic; font-size: 0.9rem;">Bản này đã bao quát các tiêu chí chấm điểm trong đề: địa điểm và sự kiện lịch sử, bối cảnh và ý nghĩa, tư liệu hiện vật, thiết kế tương tác và nguồn tham khảo.</p>
-            </section>
-        </main>
-
-        <!-- Sidebar (Historic Vietnam Style) -->
-        <aside class="sidebar">
-            <div class="sidebar-widget search-box">
-                <input type="text" placeholder="Search ...">
             </div>
+        </section>
 
-            <div class="sidebar-widget">
-                <div class="sidebar-title">Archives</div>
-                <ul class="archive-list">
-                    <li>October 2026</li>
-                    <li>September 2026</li>
-                    <li>March 2026</li>
-                    <li>January 2026</li>
-                    <li>January 2021</li>
-                    <li>December 2020</li>
-                    <li>November 2020</li>
-                    <li>October 2020</li>
-                    <li>August 2020</li>
-                    <li>June 2020</li>
-                </ul>
+        <!-- Section 3 -->
+        <section class="section-box">
+            <h2>Dòng thời gian tương tác</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1910</div>
+                    <p><strong>Từ Phan Thiết vào Sài Gòn</strong><br>Nguyễn Tất Thành rời Trường Dục Thanh và tiếp tục hành trình vào Sài Gòn.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1910–1911</div>
+                    <p><strong>Thời gian ở Sài Gòn</strong><br>Người ở tại cơ sở Liên Thành thương quán, tìm hiểu đời sống người lao động và chuẩn bị ra nước ngoài.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">5/6/1911</div>
+                    <p><strong>Rời Bến Nhà Rồng</strong><br>Nguyễn Tất Thành lấy tên Văn Ba, đi trên tàu Amiral Latouche-Tréville, bắt đầu hành trình tìm đường cứu nước.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1919</div>
+                    <p><strong>Tên Nguyễn Ái Quốc xuất hiện trên diễn đàn quốc tế</strong><br>Người gửi Yêu sách của nhân dân An Nam tới Hội nghị Versailles.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1920</div>
+                    <p><strong>Xác định con đường cách mạng</strong><br>Nguyễn Ái Quốc tiếp cận và lựa chọn con đường cách mạng vô sản, mở ra bước phát triển mới trong quá trình tìm đường giải phóng dân tộc.</p>
+                </div>
             </div>
-        </aside>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="section-box">
+            <h2>Hiện vật, hình ảnh và tư liệu lịch sử</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Tư liệu đề xuất</th>
+                        <th>Giá trị đối với triển lãm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ảnh di tích số 5 Châu Văn Liêm</td>
+                        <td>Giới thiệu nơi Nguyễn Tất Thành từng ở tại Sài Gòn.</td>
+                    </tr>
+                    <tr>
+                        <td>Ảnh Bến Nhà Rồng</td>
+                        <td>Xác định địa điểm gắn với sự kiện ngày 5/6/1911.</td>
+                    </tr>
+                    <tr>
+                        <td>Ảnh tàu Amiral Latouche-Tréville</td>
+                        <td>Giúp người xem hình dung phương tiện gắn với chuyến đi lịch sử.</td>
+                    </tr>
+                    <tr>
+                        <td>Bản sao sổ lương hoặc tài liệu nhân viên tàu có tên Văn Ba</td>
+                        <td>Minh họa tư liệu về việc làm trên tàu, cần ghi rõ nguồn lưu trữ.</td>
+                    </tr>
+                    <tr>
+                        <td>Bản sao Yêu sách của nhân dân An Nam năm 1919</td>
+                        <td>Thể hiện bước phát triển trong hoạt động chính trị của Nguyễn Ái Quốc.</td>
+                    </tr>
+                    <tr>
+                        <td>Bản đồ hành trình 1911–1920</td>
+                        <td>Kết nối sự kiện ở Sài Gòn với quá trình hoạt động quốc tế.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.95rem; margin-top: 15px;">Nguồn tham khảo quan trọng về sự kiện năm 1911 là bài viết của Bảo tàng Lịch sử TP.HCM và các tư liệu trên cổng thông tin Hồ Chí Minh.</p>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="section-box">
+            <h2>Thiết kế bảo tàng số / website</h2>
+            <p><strong>Trang chủ: Cánh cửa lịch sử</strong><br>Đặt tên triển lãm nổi bật, sử dụng ảnh Bến Nhà Rồng làm hình nền và giới thiệu ngắn về sự kiện ngày 5/6/1911. Có nút “Bắt đầu tham quan”.</p>
+            <p><strong>Bản đồ và dòng thời gian</strong><br>Cho phép người xem nhấn vào từng địa điểm hoặc mốc thời gian để mở ảnh, chú thích và thông tin lịch sử.</p>
+            <p><strong>Góc tư liệu</strong><br>Trưng bày ảnh, bản sao tài liệu, lời thuyết minh ngắn và đường dẫn tới nguồn gốc. Mỗi tư liệu cần có chú thích và thông tin xuất xứ.</p>
+            <p><strong>Góc khám phá</strong><br>Tạo câu hỏi trắc nghiệm, ghép sự kiện với năm và trò chơi sắp xếp các mốc lịch sử theo trình tự.</p>
+            <p style="font-style: italic; margin-top: 10px;"><strong>Phong cách thiết kế đề xuất:</strong> Nền màu kem giấy cũ, đỏ sẫm và nâu trầm; sử dụng phông chữ dễ đọc, ảnh có độ phân giải tốt, hạn chế chữ dài trên một màn hình. Các hiệu ứng chỉ nên hỗ trợ nội dung, không biến triển lãm lịch sử thành một đống hiệu ứng chuyển cảnh vô nghĩa.</p>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="section-box">
+            <h2>Câu hỏi tương tác dành cho khách tham quan</h2>
+            <div class="quiz-container">
+                <div class="quiz-card">
+                    <div class="quiz-title">1. Nguyễn Tất Thành rời Bến Nhà Rồng vào ngày nào?</div>
+                    <ul class="quiz-options">
+                        <li><label><input type="radio" name="q1" value="A"> 19/5/1890</label></li>
+                        <li><label><input type="radio" name="q1" value="B"> 5/6/1911</label></li>
+                        <li><label><input type="radio" name="q1" value="C"> 2/9/1945</label></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-title">2. Ngôi nhà gắn với thời gian Nguyễn Tất Thành ở Sài Gòn là địa chỉ nào?</div>
+                    <ul class="quiz-options">
+                        <li><label><input type="radio" name="q2" value="A"> Nhà số 5 Châu Văn Liêm</label></li>
+                        <li><label><input type="radio" name="q2" value="B"> Dinh Độc Lập</label></li>
+                        <li><label><input type="radio" name="q2" value="C"> Bưu điện Trung tâm Sài Gòn</label></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-title">3. Bản Yêu sách của nhân dân An Nam được gửi tới Hội nghị Versailles vào năm nào?</div>
+                    <ul class="quiz-options">
+                        <li><label><input type="radio" name="q3" value="A"> 1911</label></li>
+                        <li><label><input type="radio" name="q3" value="B"> 1919</label></li>
+                        <li><label><input type="radio" name="q3" value="C"> 1945</label></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-actions">
+                    <button class="btn-quiz" onclick="checkAnswers()">Kiểm tra kết quả</button>
+                    <button class="btn-reset" onclick="resetQuiz()">Làm lại</button>
+                </div>
+                <div id="quiz-result" class="quiz-result"></div>
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="section-box">
+            <h2>Lời kết triển lãm</h2>
+            <p>Sài Gòn lưu giữ những dấu mốc quan trọng trong hành trình của người thanh niên yêu nước Nguyễn Tất Thành. Từ ngôi nhà ở Chợ Lớn đến Bến Nhà Rồng, mỗi địa điểm gắn với một phần câu chuyện về quá trình chuẩn bị và quyết định ra đi tìm đường cứu nước.</p>
+            <p>Ngày 5/6/1911 không chỉ đánh dấu một chuyến đi bằng đường biển, mà còn mở đầu cho hành trình tìm kiếm con đường giải phóng dân tộc kéo dài nhiều năm. Nhìn lại những dấu mốc ấy, người xem có thể hiểu rõ hơn bối cảnh lịch sử, ý nghĩa của sự lựa chọn và mối liên hệ giữa những địa điểm lịch sử của Sài Gòn với tiến trình cách mạng Việt Nam.</p>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="section-box">
+            <h2>Nguồn tư liệu chính thống</h2>
+            <ol class="reference-list">
+                <li>
+                    <strong>1. Bảo tàng Hồ Chí Minh</strong><br>
+                    <em>Chuyến đi lịch sử</em><br>
+                    Tư liệu về sự kiện ngày 5/6/1911 và bối cảnh lịch sử của chuyến đi.
+                </li>
+                <li>
+                    <strong>2. Bảo tàng Lịch sử TP.HCM</strong><br>
+                    <em>Thăm nơi Bác Hồ đã ở trước khi ra đi tìm đường cứu nước</em><br>
+                    Thông tin về di tích số 5 Châu Văn Liêm và Liên Thành thương quán.
+                </li>
+                <li>
+                    <strong>3. Cổng thông tin Hồ Chí Minh</strong><br>
+                    <em>Hồ Chí Minh - Tiểu sử, Bảo tàng Hồ Chí Minh</em><br>
+                    Nguồn tham khảo về quá trình từ Phan Thiết vào Sài Gòn và các hoạt động trước năm 1911.
+                </li>
+                <li>
+                    <strong>4. Cổng thông tin Hồ Chí Minh</strong><br>
+                    <em>Những dấu mốc lịch sử trên hành trình tìm đường cứu nước của Nguyễn Ái Quốc</em><br>
+                    Nguồn về hoạt động của Nguyễn Ái Quốc từ năm 1911 đến năm 1920.
+                </li>
+                <li>
+                    <strong>5. Bảo tàng Lịch sử TP.HCM</strong><br>
+                    <em>Kỷ niệm ngày Bác Hồ ra đi tìm đường cứu nước</em><br>
+                    Tư liệu đối chiếu về tên tàu, thời điểm và hành trình xuất phát từ cảng Sài Gòn.
+                </li>
+            </ol>
+            <p style="margin-top: 15px; font-style: italic; font-size: 0.9rem;">Bản này đã bao quát các tiêu chí chấm điểm trong đề: địa điểm và sự kiện lịch sử, bối cảnh và ý nghĩa, tư liệu hiện vật, thiết kế tương tác và nguồn tham khảo.</p>
+        </section>
+
+        <footer>
+            <p>© Triển lãm số Lịch sử | Nguyễn Ái Quốc ở Sài Gòn</p>
+        </footer>
+
     </div>
-
-    <footer>
-        <p>© Triển lãm số Lịch sử | Nguyễn Ái Quốc ở Sài Gòn</p>
-    </footer>
 
     <script>
         function checkAnswers() {
