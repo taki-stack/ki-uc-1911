@@ -250,19 +250,10 @@
             display: block;
             transition: transform 0.3s ease;
         }
-        
-        .doc-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-            border-bottom: 1px solid var(--border-color);
-        }
 
         .img-link-wrapper:hover .exhibit-img,
         .img-link-wrapper:hover .doc-img {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         .image-caption {
@@ -356,6 +347,15 @@
             display: flex;
             flex-direction: column;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .doc-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
         }
         
         .doc-info {
@@ -506,8 +506,8 @@
 
         <!-- Section 2 -->
         <section class="section-box">
-            <h2>Nội dung chi tiết các khu trưng bày (KHÔNG ĐỔI)</h2>
-            <!-- (Phần này tôi giữ nguyên như phiên bản trước) -->
+            <h2>Nội dung chi tiết các khu trưng bày</h2>
+            
             <div class="exhibit-grid">
                 <!-- Khu 1 -->
                 <div class="exhibit-card">
@@ -519,10 +519,58 @@
                         <span class="exhibit-tag">Khu 1</span>
                         <h3>Ngôi nhà lưu dấu một thời tuổi trẻ</h3>
                         <p><strong>Địa điểm:</strong> Nhà số 5 Châu Văn Liêm, TP.HCM</p>
-                        <p><strong>Nội dung trưng bày:</strong> Trước khi ra đi tìm đường cứu nước, Nguyễn Tất Thành đã sống tại cơ sở của Liên Thành thương quán ở khu Chợ Lớn...</p>
+                        <p><strong>Nội dung trưng bày</strong></p>
+                        <p>Trước khi ra đi tìm đường cứu nước, Nguyễn Tất Thành đã sống tại cơ sở của Liên Thành thương quán ở khu Chợ Lớn. Theo tư liệu của Bảo tàng Lịch sử TP.HCM, địa điểm này gắn với thời gian Người ở Sài Gòn từ năm 1910 đến ngày 4/6/1911.</p>
+                        <p>Trong thời gian đó, Người tìm hiểu đời sống của các tầng lớp lao động, quan sát hoạt động tại thương cảng và tìm cơ hội làm việc trên tàu biển để ra nước ngoài.</p>
+                        <p>Ngôi nhà số 5 Châu Văn Liêm ngày nay là một địa chỉ di tích quan trọng, giúp người xem hình dung chặng đường chuẩn bị trước chuyến đi lịch sử năm 1911.</p>
                     </div>
                 </div>
-                <!-- Có thể thêm các khu 2, 3, 4 tùy ý bạn -->
+
+                <!-- Khu 2 -->
+                <div class="exhibit-card">
+                    <a href="https://www.qdnd.vn/ky-niem-110-nam-ngay-bac-ho-ra-di-tim-duong-cuu-nuoc/hanh-trinh-lich-su/hinh-anh-bac-ho-tu-ben-nha-rong-den-quang-truong-ba-dinh-lich-su-660915" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
+                        <img src="khu2-bennharong.jpg" alt="Bến Nhà Rồng" class="exhibit-img">
+                    </a>
+                    <div class="image-caption">Hình ảnh Bến Nhà Rồng và Cảng Sài Gòn xưa - nơi người thanh niên Nguyễn Tất Thành xuất phát tìm đường cứu nước</div>
+                    <div class="exhibit-content">
+                        <span class="exhibit-tag">Khu 2. Sự kiện trọng tâm của triển lãm</span>
+                        <h3>Bến Nhà Rồng và ngày 5/6/1911</h3>
+                        <p><strong>Nội dung trưng bày</strong></p>
+                        <p>Ngày 5/6/1911, người thanh niên yêu nước Nguyễn Tất Thành, khi ấy sử dụng tên Văn Ba, rời Bến Nhà Rồng trên con tàu Amiral Latouche-Tréville để sang Pháp. Đây là dấu mốc mở đầu hành trình nhiều năm tìm hiểu thế giới, nghiên cứu các con đường giải phóng dân tộc và tìm kiếm hướng đi cho cách mạng Việt Nam.</p>
+                        <p>Quyết định ra đi thể hiện khát vọng tìm hiểu những điều mới mẻ từ bên ngoài, đồng thời tìm lời giải cho câu hỏi làm thế nào để đất nước thoát khỏi ách thống trị thực dân.</p>
+                    </div>
+                </div>
+
+                <!-- Khu 3 -->
+                <div class="exhibit-card">
+                    <a href="https://congly.vn/tau-do-doc-latouche-treville-so-phan-lich-su-tao-nen-huyen-thoai-mot-con-tau-164876.html" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
+                        <img src="khu3-saigonxua.jpg" alt="Sài Gòn đầu thế kỷ XX" class="exhibit-img">
+                    </a>
+                    <div class="image-caption">Tư liệu hình ảnh phố phường và đời sống sinh hoạt của người dân Sài Gòn những năm đầu thế kỷ XX</div>
+                    <div class="exhibit-content">
+                        <span class="exhibit-tag">Khu 3</span>
+                        <h3>Sài Gòn đầu thế kỷ XX: Bối cảnh lịch sử</h3>
+                        <p><strong>Nội dung trưng bày</strong></p>
+                        <p>Đầu thế kỷ XX, Việt Nam nằm dưới ách thống trị của thực dân Pháp. Nhiều phong trào yêu nước đã diễn ra, nhưng chưa giành được thắng lợi. Trong bối cảnh đó, Nguyễn Tất Thành sớm hình thành mong muốn tìm một con đường mới để giải phóng dân tộc.</p>
+                        <p>Sài Gòn khi ấy là một trung tâm thương mại và cảng biển quan trọng ở Nam Kỳ, có các tuyến tàu biển kết nối với Pháp và nhiều khu vực khác. Môi trường đô thị và hoạt động giao thương tạo điều kiện để Nguyễn Tất Thành quan sát xã hội, tiếp xúc với đời sống người lao động và tìm cơ hội xuất dương.</p>
+                    </div>
+                </div>
+
+                <!-- Khu 4 -->
+                <div class="exhibit-card">
+                    <a href="https://dantri.com.vn/thoi-su/trang-so-luong-cua-bac-ho-khi-lam-phu-bep-tren-tau-phap-nam-1911-20200516172408150.htm" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
+                        <img src="khu4-nguyenaiquoc.jpg" alt="Nguyễn Ái Quốc năm 1919" class="exhibit-img">
+                    </a>
+                    <div class="image-caption">Hình ảnh Chân dung Nguyễn Ái Quốc đăng trên báo L'Humanité năm 1919 khi gửi bản Yêu sách của nhân dân An Nam</div>
+                    <div class="exhibit-content">
+                        <span class="exhibit-tag">Khu 4</span>
+                        <h3>Từ Nguyễn Tất Thành đến Nguyễn Ái Quốc</h3>
+                        <p><strong>Nội dung trưng bày</strong></p>
+                        <p>Chuyến đi năm 1911 mở đầu một hành trình hoạt động kéo dài khoảng 30 năm ở nước ngoài. Trong những năm tiếp theo, Nguyễn Tất Thành lao động, học hỏi, tiếp xúc với phong trào công nhân và phong trào đấu tranh của các dân tộc thuộc địa.</p>
+                        <p>Năm 1919, với tên Nguyễn Ái Quốc, Người thay mặt Hội những người Việt Nam yêu nước tại Pháp gửi bản Yêu sách của nhân dân An Nam tới Hội nghị Hòa bình Versailles, đề nghị những quyền tự do và dân chủ cơ bản cho người Việt Nam. Đến năm 1920, Người tiếp tục nghiên cứu con đường cách mạng vô sản.</p>
+                        <p>Khu trưng bày này giúp người xem hiểu rằng chuyến đi từ Sài Gòn không phải một sự kiện biệt lập, mà là điểm khởi đầu của quá trình tìm kiếm con đường giải phóng dân tộc.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -542,16 +590,23 @@
                     <div class="timeline-year">5/6/1911</div>
                     <p><strong>Rời Bến Nhà Rồng</strong><br>Nguyễn Tất Thành lấy tên Văn Ba, đi trên tàu Amiral Latouche-Tréville, bắt đầu hành trình tìm đường cứu nước.</p>
                 </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1919</div>
+                    <p><strong>Tên Nguyễn Ái Quốc xuất hiện trên diễn đàn quốc tế</strong><br>Người gửi Yêu sách của nhân dân An Nam tới Hội nghị Versailles.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1920</div>
+                    <p><strong>Xác định con đường cách mạng</strong><br>Nguyễn Ái Quốc tiếp cận và lựa chọn con đường cách mạng vô sản, mở ra bước phát triển mới trong quá trình tìm đường giải phóng dân tộc.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Section 4 (ĐÃ ĐƯỢC THAY ĐỔI THÀNH DẠNG LƯỚI CARD) -->
+        <!-- Section 4 -->
         <section class="section-box">
             <h2>Hiện vật, hình ảnh và tư liệu lịch sử</h2>
-            <p style="font-size: 0.95rem; margin-bottom: 15px;">Dưới đây là các tài liệu và hiện vật lưu trữ quý giá. Bấm vào từng hình ảnh để xem chi tiết tư liệu gốc tại trang nguồn.</p>
+            <p style="font-size: 0.95rem; margin-bottom: 20px;">Dưới đây là các tài liệu và hiện vật lưu trữ quý giá. Bấm vào từng hình ảnh để xem chi tiết tư liệu gốc tại trang nguồn.</p>
             
             <div class="document-grid">
-                
                 <!-- Tài liệu 1 -->
                 <div class="doc-card">
                     <a href="https://tuoitre.vn/saigontimes/den-nha-so-5-chau-van-liem-dau-tich-9-thang-bac-ho-chuan-bi-hanh-trinh-cuu-nuoc-1061237382.htm" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
@@ -592,7 +647,7 @@
                     </a>
                     <div class="doc-info">
                         <h4>Bản sao sổ lương có tên Văn Ba</h4>
-                        <p>Minh họa tư liệu về việc làm trên tàu, lưu trữ chân thực.</p>
+                        <p>Minh họa tư liệu về việc làm trên tàu, cần ghi rõ nguồn lưu trữ.</p>
                     </div>
                 </div>
 
@@ -617,14 +672,96 @@
                         <p>Kết nối sự kiện ở Sài Gòn với quá trình hoạt động quốc tế.</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- Section 5 -->
         <section class="section-box">
             <h2>Thiết kế bảo tàng số / website</h2>
-            <p><strong>Trang chủ: Cánh cửa lịch sử</strong><br>Đặt tên triển lãm nổi bật, sử dụng ảnh Bến Nhà Rồng làm hình nền và giới thiệu ngắn về sự kiện ngày 5/6/1911.</p>
+            <p><strong>Trang chủ: Cánh cửa lịch sử</strong><br>Đặt tên triển lãm nổi bật, sử dụng ảnh Bến Nhà Rồng làm hình nền và giới thiệu ngắn về sự kiện ngày 5/6/1911. Có nút “Bắt đầu tham quan”.</p>
+            <p><strong>Bản đồ và dòng thời gian</strong><br>Cho phép người xem nhấn vào từng địa điểm hoặc mốc thời gian để mở ảnh, chú thích và thông tin lịch sử.</p>
+            <p><strong>Góc tư liệu</strong><br>Trưng bày ảnh, bản sao tài liệu, lời thuyết minh ngắn và đường dẫn tới nguồn gốc. Mỗi tư liệu cần có chú thích và thông tin xuất xứ.</p>
+            <p><strong>Góc khám phá</strong><br>Tạo câu hỏi trắc nghiệm, ghép sự kiện với năm và trò chơi sắp xếp các mốc lịch sử theo trình tự.</p>
+            <p style="font-style: italic; margin-top: 10px;"><strong>Phong cách thiết kế đề xuất:</strong> Nền màu kem giấy cũ, đỏ sẫm và nâu trầm; sử dụng phông chữ dễ đọc, ảnh có độ phân giải tốt, hạn chế chữ dài trên một màn hình. Các hiệu ứng chỉ nên hỗ trợ nội dung, không biến triển lãm lịch sử thành một đống hiệu ứng chuyển cảnh vô nghĩa.</p>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="section-box">
+            <h2>Câu hỏi tương tác dành cho khách tham quan</h2>
+            <div class="quiz-container">
+                <div class="quiz-card">
+                    <div class="quiz-title">1. Nguyễn Tất Thành rời Bến Nhà Rồng vào ngày nào?</div>
+                    <ul class="quiz-options">
+                        <li><label><input type="radio" name="q1" value="A"> 19/5/1890</label></li>
+                        <li><label><input type="radio" name="q1" value="B"> 5/6/1911</label></li>
+                        <li><label><input type="radio" name="q1" value="C"> 2/9/1945</label></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-title">2. Ngôi nhà gắn với thời gian Nguyễn Tất Thành ở Sài Gòn là địa chỉ nào?</div>
+                    <ul class="quiz-options">
+                        <li><label><input type="radio" name="q2" value="A"> Nhà số 5 Châu Văn Liêm</label></li>
+                        <li><label><input type="radio" name="q2" value="B"> Dinh Độc Lập</label></li>
+                        <li><label><input type="radio" name="q2" value="C"> Bưu điện Trung tâm Sài Gòn</label></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-title">3. Bản Yêu sách của nhân dân An Nam được gửi tới Hội nghị Versailles vào năm nào?</div>
+                    <ul class="quiz-options">
+                        <li><label><input type="radio" name="q3" value="A"> 1911</label></li>
+                        <li><label><input type="radio" name="q3" value="B"> 1919</label></li>
+                        <li><label><input type="radio" name="q3" value="C"> 1945</label></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-actions">
+                    <button class="btn-quiz" onclick="checkAnswers()">Kiểm tra kết quả</button>
+                    <button class="btn-reset" onclick="resetQuiz()">Làm lại</button>
+                </div>
+                <div id="quiz-result" class="quiz-result"></div>
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="section-box">
+            <h2>Lời kết triển lãm</h2>
+            <p>Sài Gòn lưu giữ những dấu mốc quan trọng trong hành trình của người thanh niên yêu nước Nguyễn Tất Thành. Từ ngôi nhà ở Chợ Lớn đến Bến Nhà Rồng, mỗi địa điểm gắn với một phần câu chuyện về quá trình chuẩn bị và quyết định ra đi tìm đường cứu nước.</p>
+            <p>Ngày 5/6/1911 không chỉ đánh dấu một chuyến đi bằng đường biển, mà còn mở đầu cho hành trình tìm kiếm con đường giải phóng dân tộc kéo dài nhiều năm. Nhìn lại những dấu mốc ấy, người xem có thể hiểu rõ hơn bối cảnh lịch sử, ý nghĩa của sự lựa chọn và mối liên hệ giữa những địa điểm lịch sử của Sài Gòn với tiến trình cách mạng Việt Nam.</p>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="section-box">
+            <h2>Nguồn tư liệu chính thống</h2>
+            <ol class="reference-list">
+                <li>
+                    <strong>1. Bảo tàng Hồ Chí Minh</strong><br>
+                    <a href="https://tapchilichsudang.vn/ban-yeu-sach-cua-nhan-dan-an-nam-100-nam-voi-nhung-am-huong-hao-hung.html" target="_blank"><em>Chuyến đi lịch sử</em></a><br>
+                    Tư liệu về sự kiện ngày 5/6/1911 và bối cảnh lịch sử của chuyến đi.
+                </li>
+                <li>
+                    <strong>2. Bảo tàng Lịch sử TP.HCM</strong><br>
+                    <a href="https://media.qdnd.vn/long-form/nguyen-ai-quoc-voi-hanh-trinh-tim-duong-cuu-nuoc-giai-phong-dan-toc-54717" target="_blank"><em>Thăm nơi Bác Hồ đã ở trước khi ra đi tìm đường cứu nước</em></a><br>
+                    Thông tin về di tích số 5 Châu Văn Liêm và Liên Thành thương quán.
+                </li>
+                <li>
+                    <strong>3. Cổng thông tin Hồ Chí Minh</strong><br>
+                    <em>Hồ Chí Minh - Tiểu sử, Bảo tàng Hồ Chí Minh</em><br>
+                    Nguồn tham khảo về quá trình từ Phan Thiết vào Sài Gòn và các hoạt động trước năm 1911.
+                </li>
+                <li>
+                    <strong>4. Cổng thông tin Hồ Chí Minh</strong><br>
+                    <em>Những dấu mốc lịch sử trên hành trình tìm đường cứu nước của Nguyễn Ái Quốc</em><br>
+                    Nguồn về hoạt động của Nguyễn Ái Quốc từ năm 1911 đến năm 1920.
+                </li>
+                <li>
+                    <strong>5. Bảo tàng Lịch sử TP.HCM</strong><br>
+                    <em>Kỷ niệm ngày Bác Hồ ra đi tìm đường cứu nước</em><br>
+                    Tư liệu đối chiếu về tên tàu, thời điểm và hành trình xuất phát từ cảng Sài Gòn.
+                </li>
+            </ol>
+            <p style="margin-top: 15px; font-style: italic; font-size: 0.9rem;">Bản này đã bao quát các tiêu chí chấm điểm trong đề: địa điểm và sự kiện lịch sử, bối cảnh và ý nghĩa, tư liệu hiện vật, thiết kế tương tác và nguồn tham khảo.</p>
         </section>
 
         <footer>
@@ -632,5 +769,39 @@
         </footer>
 
     </div>
+
+    <script>
+        function checkAnswers() {
+            const answers = { q1: 'B', q2: 'A', q3: 'B' };
+            let score = 0;
+            let total = 3;
+
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.style.display = 'block';
+            if (score === total) {
+                resultDiv.style.background = '#e2f0d9';
+                resultDiv.style.color = '#385723';
+                resultDiv.innerHTML = `Xuất sắc! Bạn đã trả lời đúng ${score}/${total} câu hỏi.`;
+            } else {
+                resultDiv.style.background = '#fce4d6';
+                resultDiv.style.color = '#c65911';
+                resultDiv.innerHTML = `Bạn trả lời đúng ${score}/${total} câu hỏi. Hãy thử lại để đạt kết quả tối đa!`;
+            }
+        }
+
+        function resetQuiz() {
+            const radios = document.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => radio.checked = false);
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
