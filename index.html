@@ -218,11 +218,41 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
 
+        .img-link-wrapper {
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-link-wrapper::after {
+            content: "🔗 Mở xem tư liệu gốc";
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .img-link-wrapper:hover::after {
+            opacity: 1;
+        }
+
         .exhibit-img {
             width: 100%;
             max-height: 480px;
             object-fit: cover;
             display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .img-link-wrapper:hover .exhibit-img {
+            transform: scale(1.02);
         }
 
         .image-caption {
@@ -454,7 +484,9 @@
             <div class="exhibit-grid">
                 <!-- Khu 1 -->
                 <div class="exhibit-card">
-                    <img src="khu1-nhaso5.jpg" alt="Nhà số 5 Châu Văn Liêm" class="exhibit-img">
+                    <a href="https://tuoitre.vn/saigontimes/den-nha-so-5-chau-van-liem-dau-tich-9-thang-bac-ho-chuan-bi-hanh-trinh-cuu-nuoc-1061237382.htm" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
+                        <img src="khu1-nhaso5.jpg" alt="Nhà số 5 Châu Văn Liêm" class="exhibit-img">
+                    </a>
                     <div class="image-caption">Di tích lưu niệm Chủ tịch Hồ Chí Minh tại số 5 Châu Văn Liêm, Quận 5, TP.HCM (ngôi nhà Liên Thành thương quán xưa)</div>
                     <div class="exhibit-content">
                         <span class="exhibit-tag">Khu 1</span>
@@ -469,7 +501,9 @@
 
                 <!-- Khu 2 -->
                 <div class="exhibit-card">
-                    <img src="khu2-bennharong.jpg" alt="Bến Nhà Rồng" class="exhibit-img">
+                    <a href="https://www.qdnd.vn/ky-niem-110-nam-ngay-bac-ho-ra-di-tim-duong-cuu-nuoc/hanh-trinh-lich-su/hinh-anh-bac-ho-tu-ben-nha-rong-den-quang-truong-ba-dinh-lich-su-660915" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
+                        <img src="khu2-bennharong.jpg" alt="Bến Nhà Rồng" class="exhibit-img">
+                    </a>
                     <div class="image-caption">Hình ảnh Bến Nhà Rồng và Cảng Sài Gòn xưa - nơi người thanh niên Nguyễn Tất Thành xuất phát tìm đường cứu nước</div>
                     <div class="exhibit-content">
                         <span class="exhibit-tag">Khu 2. Sự kiện trọng tâm của triển lãm</span>
@@ -482,7 +516,9 @@
 
                 <!-- Khu 3 -->
                 <div class="exhibit-card">
-                    <img src="khu3-saigonxua.jpg" alt="Sài Gòn đầu thế kỷ XX" class="exhibit-img">
+                    <a href="https://congly.vn/tau-do-doc-latouche-treville-so-phan-lich-su-tao-nen-huyen-thoai-mot-con-tau-164876.html" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
+                        <img src="khu3-saigonxua.jpg" alt="Sài Gòn đầu thế kỷ XX" class="exhibit-img">
+                    </a>
                     <div class="image-caption">Tư liệu hình ảnh phố phường và đời sống sinh hoạt của người dân Sài Gòn những năm đầu thế kỷ XX</div>
                     <div class="exhibit-content">
                         <span class="exhibit-tag">Khu 3</span>
@@ -495,7 +531,9 @@
 
                 <!-- Khu 4 -->
                 <div class="exhibit-card">
-                    <img src="khu4-nguyenaiquoc.jpg" alt="Nguyễn Ái Quốc năm 1919" class="exhibit-img">
+                    <a href="https://dantri.com.vn/thoi-su/trang-so-luong-cua-bac-ho-khi-lam-phu-bep-tren-tau-phap-nam-1911-20200516172408150.htm" target="_blank" class="img-link-wrapper" title="Bấm để xem tư liệu gốc">
+                        <img src="khu4-nguyenaiquoc.jpg" alt="Nguyễn Ái Quốc năm 1919" class="exhibit-img">
+                    </a>
                     <div class="image-caption">Hình ảnh Chân dung Nguyễn Ái Quốc đăng trên báo L'Humanité năm 1919 khi gửi bản Yêu sách của nhân dân An Nam</div>
                     <div class="exhibit-content">
                         <span class="exhibit-tag">Khu 4</span>
@@ -638,12 +676,12 @@
             <ol class="reference-list">
                 <li>
                     <strong>1. Bảo tàng Hồ Chí Minh</strong><br>
-                    <em>Chuyến đi lịch sử</em><br>
+                    <a href="https://tapchilichsudang.vn/ban-yeu-sach-cua-nhan-dan-an-nam-100-nam-voi-nhung-am-huong-hao-hung.html" target="_blank"><em>Chuyến đi lịch sử</em></a><br>
                     Tư liệu về sự kiện ngày 5/6/1911 và bối cảnh lịch sử của chuyến đi.
                 </li>
                 <li>
                     <strong>2. Bảo tàng Lịch sử TP.HCM</strong><br>
-                    <em>Thăm nơi Bác Hồ đã ở trước khi ra đi tìm đường cứu nước</em><br>
+                    <a href="https://media.qdnd.vn/long-form/nguyen-ai-quoc-voi-hanh-trinh-tim-duong-cuu-nuoc-giai-phong-dan-toc-54717" target="_blank"><em>Thăm nơi Bác Hồ đã ở trước khi ra đi tìm đường cứu nước</em></a><br>
                     Thông tin về di tích số 5 Châu Văn Liêm và Liên Thành thương quán.
                 </li>
                 <li>
