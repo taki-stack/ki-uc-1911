@@ -202,7 +202,7 @@
 
         p { margin-bottom: 16px; text-align: justify; }
 
-        /* Images & Exhibits Layout (Khu 1 đến 4: Ảnh tĩnh bình thường) */
+        /* Images & Exhibits Layout (Khu 1 - Khu 4: Ảnh tĩnh) */
         .exhibit-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -300,7 +300,7 @@
             margin-bottom: 5px;
         }
 
-        /* Document Grid (Phần Tư liệu phía dưới có tương tác link với hinh1.jpg -> hinh6.jpg) */
+        /* Document Grid (Phần Tư liệu có tương tác link) */
         .document-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -454,8 +454,28 @@
             font-weight: 600;
         }
 
-        .reference-list { padding-left: 20px; }
-        .reference-list li { margin-bottom: 15px; }
+        .reference-list {
+            list-style: none;
+            counter-reset: ref-counter;
+        }
+        .reference-list li {
+            margin-bottom: 18px;
+            counter-increment: ref-counter;
+            position: relative;
+            padding-left: 30px;
+        }
+        .reference-list li::before {
+            content: counter(ref-counter) ". ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        .reference-list a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
 
         footer {
             text-align: center;
@@ -488,7 +508,7 @@
 
     <!-- Hero Banner -->
     <header>
-        <div class="tag-badge">★ TRIỂN LÃM LỊCH SỬ TƯƠNG TÁC SỐ ★</div>
+        <div class="tag-badge">★ TRIỂN LÃM LỊCH SỬ ★</div>
         <h1>NGUYỄN ÁI QUỐC Ở SÀI GÒN</h1>
         <p>Từ dấu chân lịch sử đến hành trình tìm đường cứu nước (1910 - 1911)</p>
         <a href="#chu-de" class="btn-start">Bắt đầu tham quan</a>
@@ -638,7 +658,7 @@
                     </a>
                     <div class="doc-info">
                         <h4>Bản sao sổ lương có tên Văn Ba</h4>
-                        <p>Minh họa tư liệu về việc làm trên tàu, cần ghi rõ nguồn lưu trữ.</p>
+                        <p>Minh họa tư liệu về việc làm trên tàu.</p>
                     </div>
                 </div>
 
@@ -667,16 +687,6 @@
         </section>
 
         <!-- Section 5 -->
-        <section class="section-box">
-            <h2>Thiết kế bảo tàng số / website</h2>
-            <p><strong>Trang chủ: Cánh cửa lịch sử</strong><br>Đặt tên triển lãm nổi bật, sử dụng ảnh Bến Nhà Rồng làm hình nền và giới thiệu ngắn về sự kiện ngày 5/6/1911. Có nút “Bắt đầu tham quan”.</p>
-            <p><strong>Bản đồ và dòng thời gian</strong><br>Cho phép người xem nhấn vào từng địa điểm hoặc mốc thời gian để mở ảnh, chú thích và thông tin lịch sử.</p>
-            <p><strong>Góc tư liệu</strong><br>Trưng bày ảnh, bản sao tài liệu, lời thuyết minh ngắn và đường dẫn tới nguồn gốc. Mỗi tư liệu cần có chú thích và thông tin xuất xứ.</p>
-            <p><strong>Góc khám phá</strong><br>Tạo câu hỏi trắc nghiệm, ghép sự kiện với năm và trò chơi sắp xếp các mốc lịch sử theo trình tự.</p>
-            <p style="font-style: italic; margin-top: 10px;"><strong>Phong cách thiết kế đề xuất:</strong> Nền màu kem giấy cũ, đỏ sẫm và nâu trầm; sử dụng phông chữ dễ đọc, ảnh có độ phân giải tốt, hạn chế chữ dài trên một màn hình. Các hiệu ứng chỉ nên hỗ trợ nội dung, không biến triển lãm lịch sử thành một đống hiệu ứng chuyển cảnh vô nghĩa.</p>
-        </section>
-
-        <!-- Section 6 -->
         <section class="section-box">
             <h2>Câu hỏi tương tác dành cho khách tham quan</h2>
             <div class="quiz-container">
@@ -715,44 +725,43 @@
             </div>
         </section>
 
-        <!-- Section 7 -->
+        <!-- Section 6 -->
         <section class="section-box">
             <h2>Lời kết triển lãm</h2>
             <p>Sài Gòn lưu giữ những dấu mốc quan trọng trong hành trình của người thanh niên yêu nước Nguyễn Tất Thành. Từ ngôi nhà ở Chợ Lớn đến Bến Nhà Rồng, mỗi địa điểm gắn với một phần câu chuyện về quá trình chuẩn bị và quyết định ra đi tìm đường cứu nước.</p>
             <p>Ngày 5/6/1911 không chỉ đánh dấu một chuyến đi bằng đường biển, mà còn mở đầu cho hành trình tìm kiếm con đường giải phóng dân tộc kéo dài nhiều năm. Nhìn lại những dấu mốc ấy, người xem có thể hiểu rõ hơn bối cảnh lịch sử, ý nghĩa của sự lựa chọn và mối liên hệ giữa những địa điểm lịch sử của Sài Gòn với tiến trình cách mạng Việt Nam.</p>
         </section>
 
-        <!-- Section 8 -->
+        <!-- Section 7 -->
         <section class="section-box">
             <h2>Nguồn tư liệu chính thống</h2>
             <ol class="reference-list">
                 <li>
-                    <strong>1. Bảo tàng Hồ Chí Minh</strong><br>
+                    <strong>Bảo tàng Hồ Chí Minh</strong><br>
                     <a href="https://tapchilichsudang.vn/ban-yeu-sach-cua-nhan-dan-an-nam-100-nam-voi-nhung-am-huong-hao-hung.html" target="_blank"><em>Chuyến đi lịch sử</em></a><br>
                     Tư liệu về sự kiện ngày 5/6/1911 và bối cảnh lịch sử của chuyến đi.
                 </li>
                 <li>
-                    <strong>2. Bảo tàng Lịch sử TP.HCM</strong><br>
+                    <strong>Bảo tàng Lịch sử TP.HCM</strong><br>
                     <a href="https://media.qdnd.vn/long-form/nguyen-ai-quoc-voi-hanh-trinh-tim-duong-cuu-nuoc-giai-phong-dan-toc-54717" target="_blank"><em>Thăm nơi Bác Hồ đã ở trước khi ra đi tìm đường cứu nước</em></a><br>
                     Thông tin về di tích số 5 Châu Văn Liêm và Liên Thành thương quán.
                 </li>
                 <li>
-                    <strong>3. Cổng thông tin Hồ Chí Minh</strong><br>
+                    <strong>Cổng thông tin Hồ Chí Minh</strong><br>
                     <em>Hồ Chí Minh - Tiểu sử, Bảo tàng Hồ Chí Minh</em><br>
                     Nguồn tham khảo về quá trình từ Phan Thiết vào Sài Gòn và các hoạt động trước năm 1911.
                 </li>
                 <li>
-                    <strong>4. Cổng thông tin Hồ Chí Minh</strong><br>
+                    <strong>Cổng thông tin Hồ Chí Minh</strong><br>
                     <em>Những dấu mốc lịch sử trên hành trình tìm đường cứu nước của Nguyễn Ái Quốc</em><br>
                     Nguồn về hoạt động của Nguyễn Ái Quốc từ năm 1911 đến năm 1920.
                 </li>
                 <li>
-                    <strong>5. Bảo tàng Lịch sử TP.HCM</strong><br>
+                    <strong>Bảo tàng Lịch sử TP.HCM</strong><br>
                     <em>Kỷ niệm ngày Bác Hồ ra đi tìm đường cứu nước</em><br>
                     Tư liệu đối chiếu về tên tàu, thời điểm và hành trình xuất phát từ cảng Sài Gòn.
                 </li>
             </ol>
-            <p style="margin-top: 15px; font-style: italic; font-size: 0.9rem;">Bản này đã bao quát các tiêu chí chấm điểm trong đề: địa điểm và sự kiện lịch sử, bối cảnh và ý nghĩa, tư liệu hiện vật, thiết kế tương tác và nguồn tham khảo.</p>
         </section>
 
         <footer>
