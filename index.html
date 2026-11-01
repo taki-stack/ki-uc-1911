@@ -204,6 +204,27 @@
 
         p { margin-bottom: 16px; text-align: justify; }
 
+        /* Style cho danh sách dấu đầu dòng trong Khảo sát */
+        .survey-list {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .survey-list li {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* Highlight box cho kết luận khảo sát */
+        .survey-summary {
+            background: #fcf9f2;
+            border-left: 4px solid var(--accent);
+            padding: 15px 20px;
+            border-radius: 0 6px 6px 0;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
         /* Images & Exhibits Layout (Khu 1 - Khu 4: Ảnh tĩnh) */
         .exhibit-grid {
             display: grid;
@@ -736,6 +757,20 @@
                     <button class="btn-reset" onclick="resetQuiz()">Làm lại</button>
                 </div>
                 <div id="quiz-result" class="quiz-result"></div>
+            </div>
+        </section>
+
+        <!-- Section Mới: Khảo sát trải nghiệm người dùng -->
+        <section class="section-box reveal">
+            <h2>Khảo sát trải nghiệm người dùng</h2>
+            <ul class="survey-list">
+                <li><strong>100% người dùng</strong> đánh giá tích cực về website, nhận xét nội dung đầy đủ, giao diện trực quan và hỗ trợ tốt cho việc học lịch sử.</li>
+                <li><strong>53% người dùng</strong> đánh giá nội dung website đã hoàn chỉnh, mạch lạc và dễ theo dõi.</li>
+                <li><strong>16% người dùng</strong> đề xuất bổ sung bản đồ số hóa và dòng thời gian (timeline) tương tác để tăng tính sinh động.</li>
+                <li><strong>31% người dùng</strong> đưa ra các phản hồi tích cực về trải nghiệm tổng thể.</li>
+            </ul>
+            <div class="survey-summary">
+                <p><strong>Kết luận từ khảo sát:</strong> Người dùng nhìn chung hài lòng với website. Nhóm sẽ tiếp tục phát huy những ưu điểm hiện có, đồng thời cân nhắc các đề xuất nhằm nâng cao tính trực quan và trải nghiệm học tập trong tương lai.</p>
             </div>
         </section>
 
